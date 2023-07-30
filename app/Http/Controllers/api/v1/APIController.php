@@ -57,9 +57,11 @@ class APIController extends Controller
             // Fetch data and parse it.
             $url = env('API_URL');
             $configFile = storage_path(env('CONFIG_PATH'));
+            
+            $responseData = $this->apiService->fetch($url);
+            $data = $responseData['body'];
+            $contentType = $responseData['content_type'];
 
-            $data = $this->apiService->fetch($url);
-            $contentType = $this->apiService->getContentType($url);
             $parsedData = $this->parserService->parse($data, $contentType);
 
             // Map and store data.

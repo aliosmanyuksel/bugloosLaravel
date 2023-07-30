@@ -17,32 +17,21 @@ class APIService implements APIServiceInterface
      * It uses Laravel's HTTP client to make the request. If the request fails, it throws an exception.
      *
      * @param string $url The URL to fetch.
-     * @return string The body of the HTTP response.
+     * @return array The body of the HTTP response and Content-type.
      * @throws \Exception If the request fails.
      */
-    public function fetch(string $url): string
+    public function fetch(string $url): array
     {
         $response = Http::get($url);
 
-        // If the request fails (4xx or 5xx HTTP status code), throw an exception.
         if ($response->failed()) {
             throw new \Exception('Failed to fetch API data');
         }
 
-        // Return the body of the HTTP response.
-        return $response->body();
+        return [
+            'body' => $response->body(),
+            'content_type' => $response->header('Content-Type'),
+        ];
     }
 
-    public function getContentType($url)
-    {
-        $response = Http::get($url);
-
-        // If the request fails (4xx or 5xx HTTP status code), throw an exception.
-        if ($response->failed()) {
-            throw new \Exception('Failed to fetch API data');
-        }
-
-        // Return the body of the HTTP response.
-        return $response->header('Content-Type');
-    }
 }
