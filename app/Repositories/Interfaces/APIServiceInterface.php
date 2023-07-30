@@ -17,5 +17,5 @@ interface APIServiceInterface
      * @param string $url - The URL to fetch data from.
      * @return string - The fetched data.
      */
-    public function fetch(string $url): string;
+    public function fetch(string $url): array;
 }
