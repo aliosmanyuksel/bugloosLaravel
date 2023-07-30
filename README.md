@@ -30,11 +30,14 @@ These instructions will get you a copy of the project up and running on your loc
 2.  Navigate to the project directory: `cd bugloosLaravel`
 3.  Install Composer dependencies: `composer install`
 4.  Create a `.env` file by copying the example file: `cp .env.example .env`
-5.  Generate an app key: `php artisan key:generate`
-6.  Set up your database and fill in the database information in the `.env` file
-7.  Migrate the database: `php artisan migrate`
-8.  Run the server: `php artisan serve`
-9.  The application should now be running at `http://localhost:8000`
+5.  Add to .env file this lines.
+    `API_URL=https://aliosmanyuksel.com.tr/wp-content/uploads/products.json
+    CONFIG_PATH=/products.yml`
+6.  Generate an app key: `php artisan key:generate`
+7.  Set up your database and fill in the database information in the `.env` file
+8.  Migrate the database: `php artisan migrate`
+9.  Run the server: `php artisan serve`
+10. The application should now be running at `http://localhost:8000`
 
 ### Usage
 
