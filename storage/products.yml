@@ -1,0 +1,44 @@
+- apiField: id
+  db:
+    table: products
+    field: id
+- apiField: title
+  db:
+    table: products
+    field: title
+- apiField: description
+  db:
+    table: products
+    field: description
+- apiField: price
+  db:
+    table: products
+    field: price
+- apiField: discountPercentage
+  db:
+    table: products
+    field: discountPercentage
+- apiField: rating
+  db:
+    table: products
+    field: rating
+- apiField: stock
+  db:
+    table: products
+    field: stock
+- apiField: brand
+  db:
+    table: products
+    field: brand
+- apiField: category
+  db:
+    table: products
+    field: category
+- apiField: thumbnail
+  db:
+    table: products
+    field: thumbnail
+- apiField: images
+  db:
+    table: product_images
+    field: image
