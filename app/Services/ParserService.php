@@ -7,8 +7,8 @@ use App\Services\XmlParser;
 
 class ParserService
 {
-    protected \App\Services\JsonParser $jsonParser;
-    protected \App\Services\XmlParser $xmlParser;
+    protected JsonParser $jsonParser;
+    protected XmlParser $xmlParser;
 
     public function __construct(JsonParser $jsonParser, XmlParser $xmlParser)
     {
