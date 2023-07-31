@@ -24,7 +24,7 @@ class ProductImagesRepository implements ProductImagesRepositoryInterface
      * @param array $data - The data for the product image to be created.
      * @return \App\Models\ProductImage - The created ProductImage model instance.
      */
-    public function create(array $data)
+    public function create(array $data): ProductImage
     {
         return ProductImage::create($data);
     }
