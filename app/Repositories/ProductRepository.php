@@ -27,7 +27,7 @@ class ProductRepository implements ProductRepositoryInterface
      * @param array $attributes - The data for the product to be created.
      * @return \App\Models\Product - The created Product model instance.
      */
-    public function create(array $attributes)
+    public function create(array $attributes): Product
     {
         return Product::create($attributes);
     }
