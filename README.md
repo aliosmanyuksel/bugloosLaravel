@@ -3,6 +3,10 @@ Laravel Product API
 
 This is a Laravel-based API that fetches, parses, maps, and stores product data from an external API into a local database. The data can then be retrieved in either JSON or XML format.
 
+Note: This project was done for a recruitment interview at Bugloos.
+
+[![Bugloos Laravel Task](https://img.youtube.com/vi/EMpqdho5b7k/maxresdefault.jpg)](https://youtu.be/EMpqdho5b7k)
+
 Features
 --------
 
@@ -19,9 +23,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
--   PHP >= 7.4
+-   PHP >= 8.1
 -   Composer
--   Laravel >= 8.x
+-   Laravel >= 10.x
 -   A SQL database
 
 ### Installing
@@ -43,8 +47,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 The application currently supports two endpoints:
 
--   `GET /fetch`: Fetches, parses, maps, and stores product data from the external API
--   `GET /products`: Retrieves all stored products in the format specified by the `Accept` header of the request
+-   `GET /api/fetch`: Fetches, parses, maps, and stores product data from the external API
+-   `GET /api/products`: Retrieves all stored products in the format specified by the `Accept` header of the request
 
 ### Tests
 
