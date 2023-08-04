@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Http;
 class APIService implements APIServiceInterface
 {
     /*
-     * The fetch method takes a URL as input and returns the body of the HTTP response.
+     * The fetch method takes a URL as input and returns the body of the HTTP response and Content-Type.
      * It uses Laravel's HTTP client to make the request. If the request fails, it throws an exception.
      *
      * @param string $url The URL to fetch.
